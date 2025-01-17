@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Shyne</h1>
+            <nav>
+                <a href="./resources">Resources</a>
+                <a href="./tools">Tools</a>
+                <a href="./updates">Updates</a>
+                <a href="./about">About</a>
+                <a href="./">Home</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Select your Semester/UFP from below:</h2>
+            <select  id="semesterSelect">
+                <option value="">--Choose Your Semester/UFP--</option>
+                <option value="semester1">Semester1</option>
+                <option value="semester2">Semester2</option>
+                <option value="UFP">UFP</option>
+            </select>
+            <h3>Select Subject</h3>
+            <select id="subjectSelect" disabled>
+                <option value="">--Choose Subject--</option>
+            </select>
+            <div id="pdfContainer">
+    
+            </div>
+    </main>
+        <footer>
+            <p>&copy; 2024 Shyne. All rights reserved.</p>
+            <p>Learn & Excel: Save time and boost your grades effortlessly.</p>
+            <div class="footer-links">
+                <a href="./resources">Resources</a>
+                <a href="./tools">Tools</a>
+                <a href="./updates">Updates</a>
+            </div>
+        </footer>
+</body>
+<script>
+    document.getElementById("semesterSelect").addEventListener("change", function(){
+        var selectedValue = this.value;
+        var subjectSelect = document.getElementById("subjectSelect");
+        var pdfContainer = document.getElementById("pdfContainer");
+
+        pdfContainer.innerHTML = "";
+        subjectSelect.innerHTML = "<option value=''>--Choose Subject--</option>";
+
+        subjectSelect.disabled = true;
+
+        var subMaterials = {
+            semester1: [
+                {name: "Maths", pdf: "https://drive.google.com/drive/folders/1V5pN8-cDD7jjVubBQvctgSiL42Ie0AWS?usp=sharing"},
+                {name: "Physics", pdf: "https://drive.google.com/drive/folders/1V5pN8-cDD7jjVubBQvctgSiL42Ie0AWS?usp=sharing"},
+                {name: "ICP", pdf: "https://drive.google.com/drive/folders/1IKlHpYrcvAg6ZG3YznTCpSZY34FUgql3?usp=sharing"},
+                {name: "ICP Lab", pdf: "https://drive.google.com/drive/folders/1LMA_L7vJd0CdoDgX2jQzEmi3tEj1F_MT?usp=sharing"},
+                {name: "ICT", pdf: "https://drive.google.com/drive/folders/13VRfTH4PWoCP52cT5Nk92ttpCGR7dhOm?usp=sharing"}
+            ],
+            // semester2: [
+            //     {name: "Maths", pdf: "https://drive.google.com/uc?export=download&id=1UGG33C0J8BxTXrqWm3ZGq5ffFTM3oUpG"},
+            //     {name: "Physics", pdf: "https://drive.google.com/uc?export=download&id=1T97MGzF0muolS59EczEvmga54wEjfuVZ"},
+            //     {name: "Computer Science", pdf: "https://drive.google.com/uc?export=download&id=1hJzfnXY2iKqP5EuPVy1RtQ3gZZ0F_Xm3"}
+            // ],
+            // UFP: [
+            //     {name: "Research Project", pdf: "https://drive.google.com/uc?export=download&id=1uPog71IKZLJwpibZ_xAwcAY7gKL7Ko-i"},
+            //     {name: "Elective 1", pdf: "https://drive.google.com/uc?export=download&id=1K-Kn0kfgLZcTt5AaZK0m-Yh5EGmXdu6P"},
+            //     {name: "Elective 2", pdf: "https://drive.google.com/uc?export=download&id=1B_iW3b2kQ3JmLZtRqb1yzHtZyM5ATNYu"}
+            // ]
+        };
+
+        if(selectedValue && subMaterials[selectedValue]) {
+            subjectSelect.disabled = false;
+
+            subMaterials[selectedValue].forEach(function(material) {
+                var option = document.createElement("option");
+                option.textContent = material.name;
+                option.value = material.pdf;
+                subjectSelect.appendChild(option);
+            });
+        }
+    });
+
+    document.getElementById("subjectSelect").addEventListener("change", function() {
+        var selectedPdfLink = this.value;
+        var pdfContainer = document.getElementById("pdfContainer");
+
+        pdfContainer.innerHTML = "";
+
+        if (selectedPdfLink) {
+            var link = document.createElement("a");
+            link.href = selectedPdfLink;
+            link.textContent = "Open";
+            link.target = "_blank";
+            pdfContainer.appendChild(link);
+        } else {
+            pdfContainer.innerHTML = "<p>Please select a valid subject to download.</p>";
+        }
+    });
+</script>
+</html>

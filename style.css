@@ -1,0 +1,582 @@
+/* Navbar */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* This will make the main content area grow to fill the available space */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    color: #000;
+    text-align: left;
+    flex: 1 1 auto;
+    margin-right: auto;
+}
+
+.navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.navbar nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0; /* Add padding for better spacing */
+}
+
+.navbar nav a:hover {
+    color: #000;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    .navbar h1 {
+        font-size: 1.3rem;
+        margin-right: 0;
+        text-align: center;
+        flex: none;
+    }
+
+    .navbar nav {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .navbar nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+}
+
+.features h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.feature-item img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Myself Section */
+.myself {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+}
+
+.myself h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.myself-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.myself-grid .img {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.myself-grid .img img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.myself-grid .img h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.myself-grid .img p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .myself-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myself-grid .img {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .myself-grid .img img {
+        width: 100px; /* Adjust image size on smaller screens */
+    }
+}
+
+/* Help Section Styling */
+.help-students {
+    padding: 2rem 2rem;
+    background: #fff;
+    border-radius: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.help-students h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.help-grid p {
+    color: #555;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .help-grid {
+        padding: 1rem;
+    }
+
+    .help-students h3 {
+        font-size: 1.8rem;
+    }
+
+    .help-grid p {
+        font-size: 1rem;
+    }
+}
+
+/* Why You'll Love Us Section */
+.love-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background: #fff;
+}
+
+section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.love-grid img {
+    max-width: 100%;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.love-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.love-grid ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Study Vibes Section */
+.study-vibes {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.vibes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.vibes-grid div {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.vibes-grid img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.vibes-grid h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Contact Us Section */
+section.form {
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Light gradient background */
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.form::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 115, 230, 0.15);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  section.form::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 115, 230, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  section.form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  section.form label {
+    display: block;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #444;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+  }
+  
+  section.form input[type="text"],
+  section.form input[type="email"],
+  section.form textarea,
+  section.form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  section.form input[type="text"]:focus,
+  section.form input[type="email"]:focus,
+  section.form textarea:focus,
+  section.form input[type="file"]:focus {
+    border-color: #0073e6;
+    outline: none;
+  }
+  
+  section.form textarea {
+    resize: vertical;
+  }
+  
+  section.form ul {
+    background-color: #e8f4fa;
+    padding: 15px;
+    border-radius: 5px;
+    list-style: disc;
+    margin-top: 10px;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+  }
+  
+  section.form ul h4 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #0073e6;
+  }
+  
+  section.form ul li {
+    margin-left: 20px;
+    color: #555;
+  }
+  
+  section.form button {
+    background-color: #0073e6;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  section.form button:hover {
+    background-color: #005bb5;
+  }
+  
+  section.form p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }  
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form {
+        padding: 1.5rem;
+    }
+    .form h3 {
+        font-size: 1.8rem;
+    }
+    .form button {
+        font-size: 1rem;
+    }
+}
+
+/* Custom Thank You Styles */
+.thanks-message {
+    background: linear-gradient(135deg, #ff5722, #ff4081);
+    color: white;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thanks-message h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.thanks-message p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.thanks-message button {
+    background-color: #ff4081;
+    padding: 1rem 2rem;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.thanks-message button:hover {
+    background-color: #ff5722;
+}
+
+.gigachad_thankyou {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.gigachad_thankyou img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gigachad_thankyou img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+/* Upadtes */
+#under_construction {
+    display: flex;
+    justify-content: center;
+}
+
+#under_construction img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .feature-grid,
+    .vibes-grid {
+        flex-direction: column;
+    }
+
+    .love-grid img {
+        width: 100%;
+    }
+}

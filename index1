@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyne</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Shyne</h1>
+            <nav>
+                <a href="./resources">Resources</a>
+                <a href="./tools">Tools</a>
+                <a href="./updates">Updates</a>
+                <a href="./about" class="active">About</a>
+                <a href="./">Home</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Welcome Mates💻🥷🏻</h2>
+            <p>"Level up your study game with the ultimate hub for sharing notes, guides, and resources. Learn smarter, not harder—together!"</p>
+    
+            <div class="hero-image">
+                <img src="students.jpg" alt="Group of students studying">
+            </div>
+        </section>
+    
+        <section class="features">
+            <h3>What Makes us Stand Out?</h3>
+    
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="notes.jpg" alt="Notes That Click">
+                    <h4>Notes That Click</h4>
+                    <p>Find exactly what you need, when you need it—no fluff, just gold.</p>
+                </div>
+    
+            <div class="feature-item">
+                <img src="filesharing.jpg" alt="Fast & Effortless Sharing">
+                <h4>Fast & Effortless Sharing</h4>
+                <p>Upload and access notes in seconds—all from one place—no hassle, no stress.</p>
+            </div>
+    
+            <div class="feature-item">
+                <img src="hustle.jpg" alt="Made for Your Hustle">
+                <h4>Made for Your Hustle</h4>
+                <p>Designed to keep up with your grind and help you crush your goals.</p>
+            </div>
+            </div>
+        </section>
+    
+        <section>
+            <h3>Why You'll Love Us</h3>
+            <div class="love-grid">
+                <img src="loveus.jpg" alt="Students collaborating">
+                <ul>
+                    <li><strong>Quick & Easy Sharing:</strong>
+                        Upload and access notes in seconds.
+                    </li>
+                    <li><strong>Community-Powered:</strong> Learn from materials of peers, teachers, and toppers.</li>
+                    <li><strong>All-in-One Resources:</strong> Notes, flashcards, guides, and more.</li>
+                </ul>
+            </div>
+        </section>
+    
+        <section class="study-vibes">
+            <div class="vibes-grid">
+                <div>
+                    <img src="study.jpg" alt="Ready to Boost Your Study Vibes?">
+                    <h4>Ready to Boost Your Study Vibes?</h4>
+                </div>
+    
+                <div>
+                    <img src="learners.jpg" alt="Made for learners by learners.">
+                    <h4>Made for learners by learners.</h4>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+    <footer>
+        <p>&copy; 2024 Shyne. All rights reserved.</p>
+        <p>Learn & Excel: Save time and boost your grades effortlessly.</p>
+        <div class="footer-links">
+            <a href="./resources">Resources</a>
+            <a href="./tools">Tools</a>
+            <a href="./updates">Updates</a>
+        </div>
+    </footer>
+</body>
+</html>
