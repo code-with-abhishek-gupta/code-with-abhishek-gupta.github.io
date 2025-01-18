@@ -6,7 +6,7 @@ body {
 }
 
 main {
-    flex: 1; /* This will make the main content area grow to fill the available space */
+    flex: 1;
 }
 
 /* Navbar */
@@ -44,7 +44,7 @@ main {
     font-size: 1rem;
     color: #555;
     transition: color 0.3s ease;
-    padding: 0.5rem 0; /* Add padding for better spacing */
+    padding: 0.5rem 0;
 }
 
 .navbar nav a:hover {
