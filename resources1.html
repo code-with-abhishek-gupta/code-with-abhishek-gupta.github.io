@@ -2,65 +2,63 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VEFMRRHGH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y7FGHT7D5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-5VEFMRRHGH');
-</script>
+        gtag('config', 'G-3Y7FGHT7D5');
+    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="web_logo.png">
     <title>Resources</title>
     <link rel="stylesheet" href="resources.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <div class="navbar">
-            <img src="web_logo.png" alt="web_logo" width="50px">
-            <h1>Shyine</h1>
-            <nav>
-                <a href="./resources">Resources</a>
-                <a href="./tools">Tools</a>
-                <a href="./updates">Updates</a>
-                <a href="./about">About</a>
-                <a href="./">Home</a>
-            </nav>
+            <a href="./" class="header-link">
+                <img src="web_logo.png" alt="web_logo"/>
+                <h1>Shyine</h1>
+            </a>
+            <nav><a href="./resources">Resources</a><a href="./tools">Tools</a><a href="./updates">Updates</a><a
+                    href="./about">About</a><a href="./">Home</a> <a href="https://www.instagram.com/shyine_official/" target="_blank"><i class="fab fa-instagram"></i>Follow Us!</a>
+                    <a
+                    href="https://chat.whatsapp.com/Ha6m3lt6mJm06UOnPw3c9o" target="_blank"><i
+                        class="fab fa-whatsapp"></i>Join Us!</a></nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <h2>Select your Semester/UFP from below:</h2>
-            <select id="semesterSelect">
+            <h2>Select your Semester/UFP from below:</h2><select id="semesterSelect">
                 <option value="">--Choose Your Semester/UFP--</option>
                 <option value="semester1">Semester1</option>
                 <option value="semester2">Semester2</option>
+                <option value="elective">Elective</option>
                 <option value="UFP">UFP</option>
             </select>
-            <h3>Select Subject</h3>
-            <select id="subjectSelect" disabled>
+            <h3>Select Subject</h3><select id="subjectSelect" disabled="disabled">
                 <option value="">--Choose Subject--</option>
             </select>
-            <div id="pdfContainer">
-
-            </div>
+            <div id="pdfContainer"></div>
     </main>
     <footer>
         <p>&copy; 2024 Shyine. All rights reserved.</p>
         <p>Learn & Excel: Save time and boost your grades effortlessly.</p>
-        <div class="footer-links">
-            <a href="./resources">Resources</a>
-            <a href="./tools">Tools</a>
-            <a href="./updates">Updates</a>
-        </div>
+        <div class="footer-links"><a href="./resources">Resources</a><a href="./tools">Tools</a><a
+                href="./updates">Updates</a></div>
     </footer>
 </body>
 <script>
-    document.getElementById("semesterSelect").addEventListener("change", function () {
+   document.getElementById("semesterSelect").addEventListener("change", function () {
         var selectedValue = this.value;
         var subjectSelect = document.getElementById("subjectSelect");
         var pdfContainer = document.getElementById("pdfContainer");
@@ -82,7 +80,11 @@
                 { name: "Maths", pdf: "https://drive.google.com/drive/folders/1nOdPs19NPzzhBVFnbtccSqQY9qaeoI45?usp=sharing" },
                 { name: "Engineering Graphics", pdf: "https://drive.google.com/drive/folders/1bf3LW8Z9-3bnQJRujOwZ-2v4w4hF4yub?usp=sharing" },
                 { name: "Digital Logic Design", pdf: "https://drive.google.com/drive/folders/1zKr4rm0rvteMhSxLyCouPwP2D44JQTHI?usp=sharing" },
-                { name: "Problem Solving With Python", pdf: "https://drive.google.com/drive/folders/1ATz9gogRMmiOuzQ_vPrGfLE366OJBFoA?usp=sharing" }
+                { name: "Problem Solving With Python", pdf: "https://drive.google.com/drive/folders/1ATz9gogRMmiOuzQ_vPrGfLE366OJBFoA?usp=sharing" },
+                {name: "Web Technology", pdf: "https://drive.google.com/drive/folders/1P8XEfc6N4iS4ECoFzTWNM2zvGcJRECV4?usp=sharing"}
+            ],
+            elective: [
+                { name: "Intro To Stock Market", pdf: "https://drive.google.com/drive/folders/1Dq4eP8mZHRkWwYQ27hnMSUcmCg8HVqPQ?usp=sharing" }
             ],
             UFP: [
                 { name: "Humanities And Arts", pdf: "https://drive.google.com/drive/folders/18910Vote_EeIod87onN9iUCJgMAEkcir?usp=sharing" },
