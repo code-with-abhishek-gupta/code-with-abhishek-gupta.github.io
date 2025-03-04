@@ -69,6 +69,10 @@ header .header-link h1 {
     color: #000;
 }
 
+.navbar a img {
+    border-radius: 0.3rem;
+}
+
 /* Responsive design for small screens */
 @media (max-width: 768px) {
     .navbar {
