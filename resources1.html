@@ -222,20 +222,6 @@
       sbl: ["mba", "bba", "llm", "bba_llb"]
     };
 
-    // Add placeholder links to all programs and semesters
-    Object.entries(schools).forEach(([school, programs]) => {
-      programs.forEach(program => {
-        if (!data[school][program]) data[school][program] = {};
-        ["semester2", "semester4", "semester6"].forEach(sem => {
-          if (!data[school][program][sem]) {
-            data[school][program][sem] = {
-              "2024": `https://example.com/${school}_${program}_${sem}`
-            };
-          }
-        });
-      });
-    });
-
     const schoolSelect = document.getElementById("schoolSelect");
     const programSelect = document.getElementById("programSelect");
     const semesterSelect = document.getElementById("semesterSelect");
@@ -249,11 +235,17 @@
 
       const selectedSchool = schoolSelect.value;
       if (selectedSchool && data[selectedSchool]) {
-        programSelect.disabled = false;
-        Object.keys(data[selectedSchool]).forEach(program => {
-          const label = program.replace(/_/g, " ").toUpperCase();
-          programSelect.innerHTML += `<option value="${program}">${label}</option>`;
-        });
+        const availablePrograms = Object.keys(data[selectedSchool]).filter(program => 
+          Object.keys(data[selectedSchool][program]).length > 0
+        );
+        
+        if (availablePrograms.length > 0) {
+          programSelect.disabled = false;
+          availablePrograms.forEach(program => {
+            const label = program.replace(/_/g, " ").toUpperCase();
+            programSelect.innerHTML += `<option value="${program}">${label}</option>`;
+          });
+        }
       }
     });
 
@@ -265,11 +257,17 @@
       const selectedSchool = schoolSelect.value;
       const selectedProgram = programSelect.value;
       if (data[selectedSchool] && data[selectedSchool][selectedProgram]) {
-        semesterSelect.disabled = false;
-        Object.keys(data[selectedSchool][selectedProgram]).forEach(sem => {
-          const label = sem.replace("semester", "Semester ");
-          semesterSelect.innerHTML += `<option value="${sem}">${label}</option>`;
-        });
+        const availableSemesters = Object.keys(data[selectedSchool][selectedProgram]).filter(sem =>
+          Object.keys(data[selectedSchool][selectedProgram][sem]).length > 0
+        );
+        
+        if (availableSemesters.length > 0) {
+          semesterSelect.disabled = false;
+          availableSemesters.forEach(sem => {
+            const label = sem.replace("semester", "Semester ");
+            semesterSelect.innerHTML += `<option value="${sem}">${label}</option>`;
+          });
+        }
       }
     });
 
@@ -279,16 +277,18 @@
       const sem = semesterSelect.value;
 
       pdfContainer.innerHTML = "";
-      if (data[s] && data[s][p] && data[s][p][sem]) {
+      if (data[s]?.[p]?.[sem]) {
         const links = data[s][p][sem];
-        Object.keys(links).forEach(year => {
-          const a = document.createElement("a");
-          a.href = links[year];
-          a.textContent = `Open PYQ PDF`;
-          a.target = "_blank";
-          pdfContainer.appendChild(a);
-          pdfContainer.appendChild(document.createElement("br"));
-        });
+        if (Object.keys(links).length > 0) {
+          Object.keys(links).forEach(year => {
+            const a = document.createElement("a");
+            a.href = links[year];
+            a.textContent = `Open PYQ PDF`;
+            a.target = "_blank";
+            pdfContainer.appendChild(a);
+            pdfContainer.appendChild(document.createElement("br"));
+          });
+        }
       }
     });
   </script>
