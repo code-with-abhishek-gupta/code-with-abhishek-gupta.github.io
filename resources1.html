@@ -2,124 +2,335 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y7FGHT7D5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-3Y7FGHT7D5');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="shyine logo.png">
-    <title>Resources</title>
-    <link rel="stylesheet" href="resources.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="shyine logo.png" />
+  <title>Resources</title>
+  <link rel="stylesheet" href="resources.css" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <a href="./" class="header-link">
-                <img src="shyine logo.png" alt="web_logo"/>
-                <h1>Shyine</h1>
-            </a>
-            <nav><a href="./resources">Resources</a><a href="./tools">Tools</a><a href="./updates">Updates</a><a
-                    href="./about">About</a><a href="./">Home</a> <a href="https://www.instagram.com/shyine_official/" target="_blank"><i class="fab fa-instagram"></i>Follow Us!</a>
-                    <a
-                    href="https://whatsapp.com/channel/0029Vb30nfc2phHNIigWzc2l" target="_blank"><i
-                        class="fab fa-whatsapp"></i>Join Us!</a></nav>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <h2>Select your Semester/UFP from below:</h2><select id="semesterSelect">
-                <option value="">--Choose Your Semester/UFP--</option>
-                <option value="semester1">Semester1</option>
-                <option value="semester2">Semester2</option>
-                <option value="elective">Elective</option>
-                <option value="UFP">UFP</option>
-            </select>
-            <h3>Select Subject</h3><select id="subjectSelect" disabled="disabled">
-                <option value="">--Choose Subject--</option>
-            </select>
-            <div id="pdfContainer"></div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Shyine. All rights reserved.</p>
-        <p>Learn & Excel: Save time and boost your grades effortlessly.</p>
-        <div class="footer-links"><a href="./resources">Resources</a><a href="./tools">Tools</a><a
-                href="./updates">Updates</a></div>
-    </footer>
+  <header>
+    <div class="navbar">
+      <a href="./" class="header-link">
+        <img src="shyine logo.png" alt="web_logo" />
+        <h1>Shyine</h1>
+      </a>
+      <nav>
+        <a href="./resources">Resources</a>
+        <a href="./tools">Tools</a>
+        <a href="./updates">Updates</a>
+        <a href="./about">About</a>
+        <a href="./">Home</a>
+        <a href="https://www.instagram.com/shyine_official/" target="_blank"><i class="fab fa-instagram"></i>Follow Us!</a>
+        <a href="https://whatsapp.com/channel/0029Vb30nfc2phHNIigWzc2l" target="_blank"><i class="fab fa-whatsapp"></i>Join Us!</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Get Previous Year Papers</h2>
+
+      <label for="schoolSelect">Choose School:</label>
+      <select id="schoolSelect">
+        <option value="">--Select School--</option>
+        <option value="set">SET</option>
+        <option value="sos">SOS</option>
+        <option value="slse">SLSE</option>
+        <option value="seda">SEDA</option>
+        <option value="sbl">SBL</option>
+      </select>
+
+      <label for="programSelect">Choose Program:</label>
+      <select id="programSelect" disabled>
+        <option value="">--Select Program--</option>
+      </select>
+
+      <label for="semesterSelect">Choose Semester:</label>
+      <select id="semesterSelect" disabled>
+        <option value="">--Select Semester--</option>
+      </select>
+
+      <div id="pdfContainer"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Shyine. All rights reserved.</p>
+    <p>Learn & Excel: Save time and boost your grades effortlessly.</p>
+    <div class="footer-links">
+      <a href="./resources">Resources</a>
+      <a href="./tools">Tools</a>
+      <a href="./updates">Updates</a>
+    </div>
+  </footer>
+
+  <script>
+    const data = {
+      set: {
+        mechanical: {
+            semester2: {
+                "2024": "https://drive.google.com/drive/folders/1vUfjfh9jvX6oTr7_VvdvBDL2bnre8FRV?usp=drive_link"
+              },
+              semester4: {
+                "2024": "https://drive.google.com/drive/folders/1FGWLuPRK5Vv6fZx_IJBcZDhK2p2BdsEC?usp=drive_link"
+              },
+              semester6: {
+                "2024": "https://drive.google.com/drive/folders/1bavb1nJS5imuXuJP3N7RTwOOpfRMni2j?usp=drive_link"
+              }
+        },
+        eee: {
+            semester2: {
+                "2024": "https://drive.google.com/drive/folders/1vCfUkhpMoPFulF6WDIBcxduWUUKpF8Is?usp=drive_link"
+              },
+              semester4: {
+                "2024": "https://drive.google.com/drive/folders/1m1kh7u3AH8V1NVvEop8QHytS7GdG2rJd?usp=drive_link"
+              },
+              semester6: {
+                "2024": "https://drive.google.com/drive/folders/170BiPs6mEBNFx73KRBWqLHXM-Q6-yuz5?usp=drive_link"
+              }
+        },
+        cse: {
+          semester2: {
+            "2024": "https://drive.google.com/drive/folders/1EtJ7SLTJgRqGpAQEiPBUKL7rrBpj8nnT?usp=drive_link"
+          },
+          semester4: {
+            "2024": "https://drive.google.com/drive/folders/188V7oDzYnRJzdoUyWz0YAp1m-mKDwpl9?usp=drive_link"
+          },
+          semester6: {
+            "2024": "https://drive.google.com/drive/folders/1237bLLrdyEW6WUzyQdRGCkEAkUn1TMbI?usp=drive_link"
+          }
+        },
+        civil: {
+            semester2: {
+            "2024": "https://drive.google.com/drive/folders/1S07bpaPV5bk9uid8oOfDDwnjhPFKoCNO?usp=drive_link"
+          },
+          semester4: {
+            "2024": "https://drive.google.com/drive/folders/1EBbi3No29uish082y5urWVgkXjKmLH-1?usp=sharing"
+          },
+          semester6: {
+            "2024": "https://drive.google.com/drive/folders/1yoiDfAb7tTKQhZYTrx1cu-VABbfovZRn?usp=drive_link"
+          }
+        },
+        bsc_ds: {
+            semester2: {
+                "2024": "https://drive.google.com/drive/folders/1uBDrHrag8kRtAWVpF2ThzbbczR0qRUpY?usp=drive_link"
+              },
+              semester4: {
+                "2024": "https://drive.google.com/drive/folders/19V0Zy9bzR8aJlACs4iKvfh0c7mPfHVtY?usp=drive_link"
+              }
+        },
+        bca: {
+            semester2: {
+                "2024": "https://drive.google.com/drive/folders/146ga3la9JzQrU68SdxnNnmnDfrZLnnD2?usp=drive_link"
+              },
+              semester4: {
+                "2024": "https://drive.google.com/drive/folders/1Yux97EOy3LKBDqK-6mAEi9Ysw-SoYDcU?usp=drive_link"
+              }
+        }
+      },
+      sos: {
+        bsc_life_sciences: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        },
+        bsc_cpm: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        },
+        bsc_cbz: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        },
+        bsc_chemistry: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        }
+      },
+      slse: {
+        msw: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        }
+      },
+      seda: {
+        b_arch: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        }
+      },
+      sbl: {
+        mba: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        },
+        bba: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        },
+        llm: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        },
+        bba_llb: {
+            semester2: {
+                "2024": ""
+              },
+              semester4: {
+                "2024": ""
+              },
+              semester6: {
+                "2024": ""
+              }
+        }
+      }
+    };
+
+    const schools = {
+      set: ["mechanical", "eee", "cse", "civil", "bsc_ds", "bca"],
+      sos: ["bsc_life_sciences", "bsc_cpm", "bsc_cbz", "bsc_chemistry"],
+      slse: ["msw"],
+      seda: ["b_arch"],
+      sbl: ["mba", "bba", "llm", "bba_llb"]
+    };
+
+    // Add placeholder links to all programs and semesters
+    Object.entries(schools).forEach(([school, programs]) => {
+      programs.forEach(program => {
+        if (!data[school][program]) data[school][program] = {};
+        ["semester2", "semester4", "semester6"].forEach(sem => {
+          if (!data[school][program][sem]) {
+            data[school][program][sem] = {
+              "2024": `https://example.com/${school}_${program}_${sem}`
+            };
+          }
+        });
+      });
+    });
+
+    const schoolSelect = document.getElementById("schoolSelect");
+    const programSelect = document.getElementById("programSelect");
+    const semesterSelect = document.getElementById("semesterSelect");
+    const pdfContainer = document.getElementById("pdfContainer");
+
+    schoolSelect.addEventListener("change", () => {
+      programSelect.innerHTML = "<option value=''>--Select Program--</option>";
+      semesterSelect.innerHTML = "<option value=''>--Select Semester--</option>";
+      pdfContainer.innerHTML = "";
+      programSelect.disabled = semesterSelect.disabled = true;
+
+      const selectedSchool = schoolSelect.value;
+      if (selectedSchool && data[selectedSchool]) {
+        programSelect.disabled = false;
+        Object.keys(data[selectedSchool]).forEach(program => {
+          const label = program.replace(/_/g, " ").toUpperCase();
+          programSelect.innerHTML += `<option value="${program}">${label}</option>`;
+        });
+      }
+    });
+
+    programSelect.addEventListener("change", () => {
+      semesterSelect.innerHTML = "<option value=''>--Select Semester--</option>";
+      pdfContainer.innerHTML = "";
+      semesterSelect.disabled = true;
+
+      const selectedSchool = schoolSelect.value;
+      const selectedProgram = programSelect.value;
+      if (data[selectedSchool] && data[selectedSchool][selectedProgram]) {
+        semesterSelect.disabled = false;
+        Object.keys(data[selectedSchool][selectedProgram]).forEach(sem => {
+          const label = sem.replace("semester", "Semester ");
+          semesterSelect.innerHTML += `<option value="${sem}">${label}</option>`;
+        });
+      }
+    });
+
+    semesterSelect.addEventListener("change", () => {
+      const s = schoolSelect.value;
+      const p = programSelect.value;
+      const sem = semesterSelect.value;
+
+      pdfContainer.innerHTML = "";
+      if (data[s] && data[s][p] && data[s][p][sem]) {
+        const links = data[s][p][sem];
+        Object.keys(links).forEach(year => {
+          const a = document.createElement("a");
+          a.href = links[year];
+          a.textContent = `Open PYQ PDF - ${year}`;
+          a.target = "_blank";
+          pdfContainer.appendChild(a);
+          pdfContainer.appendChild(document.createElement("br"));
+        });
+      }
+    });
+  </script>
 </body>
-<script>
-   document.getElementById("semesterSelect").addEventListener("change", function () {
-        var selectedValue = this.value;
-        var subjectSelect = document.getElementById("subjectSelect");
-        var pdfContainer = document.getElementById("pdfContainer");
-
-        pdfContainer.innerHTML = "";
-        subjectSelect.innerHTML = "<option value=''>--Choose Subject--</option>";
-
-        subjectSelect.disabled = true;
-
-        var subMaterials = {
-            semester1: [
-                { name: "Maths", pdf: "https://drive.google.com/drive/folders/1V5pN8-cDD7jjVubBQvctgSiL42Ie0AWS?usp=sharing" },
-                { name: "Physics", pdf: "https://drive.google.com/drive/folders/1l1kB4-RbIjximOAhVzS6P8zbJRbY8z5_?usp=sharing" },
-                { name: "ICP", pdf: "https://drive.google.com/drive/folders/1IKlHpYrcvAg6ZG3YznTCpSZY34FUgql3?usp=sharing" },
-                { name: "ICP Lab", pdf: "https://drive.google.com/drive/folders/1LMA_L7vJd0CdoDgX2jQzEmi3tEj1F_MT?usp=sharing" },
-                { name: "ICT", pdf: "https://drive.google.com/drive/folders/13VRfTH4PWoCP52cT5Nk92ttpCGR7dhOm?usp=sharing" }
-            ],
-            semester2: [
-                { name: "Maths", pdf: "https://drive.google.com/drive/folders/1nOdPs19NPzzhBVFnbtccSqQY9qaeoI45?usp=sharing" },
-                { name: "Engineering Graphics", pdf: "https://drive.google.com/drive/folders/1bf3LW8Z9-3bnQJRujOwZ-2v4w4hF4yub?usp=sharing" },
-                { name: "Digital Logic Design", pdf: "https://drive.google.com/drive/folders/1zKr4rm0rvteMhSxLyCouPwP2D44JQTHI?usp=sharing" },
-                { name: "Problem Solving With Python", pdf: "https://drive.google.com/drive/folders/1ATz9gogRMmiOuzQ_vPrGfLE366OJBFoA?usp=sharing" },
-                {name: "Web Technology", pdf: "https://drive.google.com/drive/folders/1P8XEfc6N4iS4ECoFzTWNM2zvGcJRECV4?usp=sharing"}
-            ],
-            elective: [
-                { name: "Intro To Stock Market", pdf: "https://drive.google.com/drive/folders/1Dq4eP8mZHRkWwYQ27hnMSUcmCg8HVqPQ?usp=sharing" }
-            ],
-            UFP: [
-                { name: "Humanities And Arts", pdf: "https://drive.google.com/drive/folders/18910Vote_EeIod87onN9iUCJgMAEkcir?usp=sharing" },
-                { name: "Data Science", pdf: "https://drive.google.com/drive/folders/1PU9Kr-JNG7qTFhG1ojJ0ZXFhoWiNCPiL?usp=sharing" }
-            ]
-        };
-
-        if (selectedValue && subMaterials[selectedValue]) {
-            subjectSelect.disabled = false;
-
-            subMaterials[selectedValue].forEach(function (material) {
-                var option = document.createElement("option");
-                option.textContent = material.name;
-                option.value = material.pdf;
-                subjectSelect.appendChild(option);
-            });
-        }
-    });
-
-    document.getElementById("subjectSelect").addEventListener("change", function () {
-        var selectedPdfLink = this.value;
-        var pdfContainer = document.getElementById("pdfContainer");
-
-        pdfContainer.innerHTML = "";
-
-        if (selectedPdfLink) {
-            var link = document.createElement("a");
-            link.href = selectedPdfLink;
-            link.textContent = "Open";
-            link.target = "_blank";
-            pdfContainer.appendChild(link);
-        } else {
-            pdfContainer.innerHTML = "<p>Please select a valid subject to download.</p>";
-        }
-    });
-</script>
 
 </html>
